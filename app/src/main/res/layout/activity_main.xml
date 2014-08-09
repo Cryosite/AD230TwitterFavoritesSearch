@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:stretchColumns="*"
+    android:background="#00F">
+
+    <!-- tableRow0 -->
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:inputType="text"
+            android:id="@+id/queryEditText"
+            android:hint="@string/queryPrompt"
+            android:textColor="#FFF"
+            android:imeOptions="actionNext">
+        </EditText>
+    </TableRow>
+
+    <!-- tableRow1 -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <EditText
+            android:layout_height="wrap_content"
+            android:hint="@string/tagPrompt"
+            android:textColor="#FFF"
+            android:inputType="text"
+            android:id="@+id/tagEditText"
+            android:imeOptions="actionDone"
+            android:layout_gravity="center_vertical"></EditText>
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/save"
+            android:textColor="#FFF"></Button>
+    </TableRow>
+
+    <!-- tableRow2 -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#009">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/taggedSearchesTextView"
+            android:text="@string/taggedSearches"
+            android:textColor="#FFF"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_span="2"
+            android:textSize="18sp"
+            android:padding="5dp"></TextView>
+    </TableRow>
+
+    <!-- tableRow3 -->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:background="#03F"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/queryScrollView"
+            android:layout_width="match_parent"
+            android:layout_span="2"
+            android:padding="5dp">
+            <TableLayout
+                android:id="@+id/queryTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:stretchColumns="*"></TableLayout>
+        </ScrollView>
+    </TableRow>
+
+    <!-- tableRow4 -->
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clearTags"
+            android:textColor="#FFF"
+            android:id="@+id/clearTagsButton"
+            android:layout_span="2"
+            android:layout_marginTop="5dp"></Button>
+    </TableRow>
+</TableLayout>
+
+
+    <!--
+    Modified from source code provided by Deitel & Associates, Inc. and
+    Pearson Education, Inc.
+     -->
+
